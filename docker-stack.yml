@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   web:
-    image: majdishomali/swarm-test-app:latest
+    image: mshomali97/swarm-test-app:latest
     ports:
       - "80:80"
     deploy:
