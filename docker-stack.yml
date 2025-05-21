@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  web:
+    image: majdishomali/swarm-test-app:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+      placement:
+        constraints:
+          - node.role == worker
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: overlay
